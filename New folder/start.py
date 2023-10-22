@@ -1,4 +1,3 @@
-import
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
@@ -97,6 +96,22 @@ def window4():
     canvas.create_image(0, 0, image=background, anchor=NW)
 
     #    ---add Wall of window4------   
+    def Easy():
+        global window
+        window.destroy() 
+        windows4 = Tk()
+        windows4.title('v')
+        app_width = windows4.winfo_screenwidth()
+        app_height = windows4.winfo_screenheight()
+        windows4.geometry(f'{app_width}x{app_height}')
+        frame = Frame(windows4, width=app_width, height=app_height)
+        frame.pack()
+        canvas = Canvas(frame, width=app_width, height=app_height)
+        canvas.pack()
+        bg_image = Image.open("image/window4.png")
+        bg_image = bg_image.resize((app_width, app_height))
+        background = ImageTk.PhotoImage(bg_image)
+        canvas.create_image(0, 0, image=background, anchor=NW)
      
     canvas.create_rectangle(0, 630, 400, 810, fill="black", tags="wall")
     canvas.create_rectangle(0, 0, 20, 810, fill="black", tags="wall")
@@ -109,6 +124,16 @@ def window4():
     canvas.create_rectangle(400, 530, 350, 810, fill="black", tags="wall")
     canvas.create_rectangle(400, 570, 300, 810, fill="black", tags="wall")
     canvas.create_rectangle(400, 600, 250, 810, fill="black", tags="wall")
+
+
+    # -----add wall 2-------
+    canvas.create_rectangle(400, 350, 200, 380, fill="black", tags="wall")
+    canvas.create_rectangle(900, 350, 800, 380, fill="black", tags="wall")
+    canvas.create_rectangle(1000, 470, 750, 440, fill="black", tags="wall")
+    canvas.create_rectangle(1100, 550, 700, 520, fill="black", tags="wall")
+
+    canvas.create_rectangle(1400, 120, 1000, 90, fill="black", tags="wall")
+    canvas.create_rectangle(980, 190, 850, 160, fill="black", tags="wall")
 
     windows4.mainloop()
 
