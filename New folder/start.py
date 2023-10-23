@@ -200,6 +200,14 @@ def Easy():
     canvas.create_rectangle(810, 210, 780, 180, fill="black", tags="wall")
     canvas.create_rectangle(200, 310, 100, 280, fill="black", tags="wall")
 
+    # --------add door--------
+
+    image = Image.open('./image/door.png')
+    imageTk = ImageTk.PhotoImage(image)
+    canvas.create_image(1220, 59,image=imageTk)
+
+   
+
 
 
     window.mainloop()
