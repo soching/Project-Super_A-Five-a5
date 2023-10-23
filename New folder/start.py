@@ -301,6 +301,12 @@ def Normal():
     canvas.create_rectangle(370, 210, 340, 180, fill="black", tags="wall")
     canvas.create_rectangle(490, 170, 460, 140, fill="black", tags="wall")
    
+    # -----------door 2-------------
+
+    image = Image.open('./image/door.png')
+    imageTk = ImageTk.PhotoImage(image)
+    canvas.create_image(645, 59,image=imageTk)
+
 
 
     window.mainloop()
