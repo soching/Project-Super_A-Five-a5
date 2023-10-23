@@ -248,6 +248,40 @@ def Normal():
     button_back = Button(canvas, text="Back",font=40, command=window3, bg='red',border=10)
     button_back.pack()
     button_back.place(x=50, y=50, width=90)    
+
+
+     # ---------add Wall of window4------   
+    canvas.create_rectangle(150, 630, 0, 810, fill="black", tags="wall")
+    canvas.create_rectangle(0, 0, 20, 810, fill="black", tags="wall")
+    canvas.create_rectangle(0, 0, 1400, 20, fill="black", tags="wall")
+    canvas.create_rectangle(1250, 0, 1300, 1200, fill="black", tags="wall")
+    canvas.create_rectangle(800, 630, 400, 810, fill="black", tags="wall")
+
+    canvas.create_rectangle(450, 530, 400, 810, fill="black", tags="wall")
+    canvas.create_rectangle(500, 570, 450, 810, fill="black", tags="wall")
+    canvas.create_rectangle(550, 595, 500, 810, fill="black", tags="wall")
+
+    canvas.create_rectangle(300, 530, 250, 810, fill="black", tags="wall")
+    canvas.create_rectangle(300, 570, 200, 810, fill="black", tags="wall")
+    canvas.create_rectangle(300, 600, 150, 810, fill="black", tags="wall")
+
+    canvas.create_rectangle(900, 530, 850, 810, fill="black", tags="wall")
+    canvas.create_rectangle(900, 570, 800, 810, fill="black", tags="wall")
+    canvas.create_rectangle(800, 600, 750, 810, fill="black", tags="wall")
+
+
+    canvas.create_rectangle(1050, 530, 1000, 810, fill="black", tags="wall")
+    canvas.create_rectangle(1100, 570, 1050, 810, fill="black", tags="wall")
+    canvas.create_rectangle(1150, 600, 1100, 810, fill="black", tags="wall")
+
+    
+    canvas.create_rectangle(1400, 630, 1150, 810, fill="black", tags="wall")
+
+    
+
+
+
+
     window.mainloop()
 
 #Hard Game--------------------------------
