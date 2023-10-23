@@ -308,6 +308,52 @@ def Normal():
     canvas.create_image(645, 59,image=imageTk)
 
 
+    # ------------coins 2--------------
+    image2 = Image.open('./image/coint.png')
+    imageTk2 = ImageTk.PhotoImage(image2)
+
+    # -------------coins right------------
+    canvas.create_image(1100, 240,image=imageTk2)
+    canvas.create_image(1140, 240,image=imageTk2)
+    canvas.create_image(1180, 240,image=imageTk2)
+    canvas.create_image(1220, 240,image=imageTk2)
+
+    canvas.create_image(915, 160,image=imageTk2)
+    canvas.create_image(805, 120,image=imageTk2)
+
+    canvas.create_image(1220, 450,image=imageTk2)
+    canvas.create_image(1180, 450,image=imageTk2)
+    canvas.create_image(1140, 450,image=imageTk2)
+    canvas.create_image(1140, 490,image=imageTk2)
+    canvas.create_image(1180, 490,image=imageTk2)
+    canvas.create_image(1220, 490,image=imageTk2)
+
+    # ---------------coins left-------------
+    canvas.create_image(55, 240,image=imageTk2)
+    canvas.create_image(95, 240,image=imageTk2)
+    canvas.create_image(135, 240,image=imageTk2)
+    canvas.create_image(175, 240,image=imageTk2)
+
+    canvas.create_image(355, 160,image=imageTk2)
+    canvas.create_image(475, 120,image=imageTk2)
+
+    canvas.create_image(135, 480,image=imageTk2)
+    canvas.create_image(95, 480,image=imageTk2)
+    canvas.create_image(55, 480,image=imageTk2)
+    canvas.create_image(55, 440,image=imageTk2)
+    canvas.create_image(95, 440,image=imageTk2)
+    canvas.create_image(135, 440,image=imageTk2)
+
+    # ----------------coins center-----------------
+    canvas.create_image(612, 330,image=imageTk2)
+    canvas.create_image(652, 330,image=imageTk2)
+    canvas.create_image(692, 330,image=imageTk2)
+    canvas.create_image(612, 290,image=imageTk2)
+    canvas.create_image(652, 290,image=imageTk2)
+    canvas.create_image(692, 290,image=imageTk2)
+
+
+
 
     window.mainloop()
 
