@@ -228,6 +228,7 @@ def Hard():
     button_back.pack()
     button_back.place(x=50, y=50, width=90)  
     window.mainloop()
+    
 #show-of start window--------------
 
 window = Tk()
