@@ -1,4 +1,3 @@
-
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
@@ -181,7 +180,31 @@ def Easy():
     canvas.create_rectangle(400, 530, 350, 810, fill="black", tags="wall")
     canvas.create_rectangle(400, 570, 300, 810, fill="black", tags="wall")
     canvas.create_rectangle(400, 600, 250, 810, fill="black", tags="wall")
+
+    # -----add wall 2-------
+    canvas.create_rectangle(400, 350, 200, 380, fill="black", tags="wall")
+    canvas.create_rectangle(900, 350, 800, 380, fill="black", tags="wall")
+    canvas.create_rectangle(1000, 470, 750, 440, fill="black", tags="wall")
+    canvas.create_rectangle(1100, 550, 700, 520, fill="black", tags="wall")
+
+    # -------add wall the end--------
+
+    canvas.create_rectangle(1400, 120, 1000, 90, fill="black", tags="wall")
+    canvas.create_rectangle(980, 190, 850, 160, fill="black", tags="wall")
+
+
+    canvas.create_rectangle(400, 350, 200, 380, fill="black", tags="wall")
+    canvas.create_rectangle(600, 320, 450, 290, fill="black", tags="wall")
+    canvas.create_rectangle(730, 260, 640, 230, fill="black", tags="wall")
+    canvas.create_rectangle(780, 320, 750, 290, fill="black", tags="wall")
+    canvas.create_rectangle(810, 210, 780, 180, fill="black", tags="wall")
+    canvas.create_rectangle(200, 310, 100, 280, fill="black", tags="wall")
+
+
+
     window.mainloop()
+
+    
 
 #Normal Game--------------------------------
 
