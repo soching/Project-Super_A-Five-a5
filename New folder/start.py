@@ -307,7 +307,6 @@ def Normal():
     imageTk = ImageTk.PhotoImage(image)
     canvas.create_image(645, 59,image=imageTk)
 
-
     # ------------coins 2--------------
     image2 = Image.open('./image/coint.png')
     imageTk2 = ImageTk.PhotoImage(image2)
@@ -352,6 +351,8 @@ def Normal():
     canvas.create_image(652, 290,image=imageTk2)
     canvas.create_image(692, 290,image=imageTk2)
 
+
+   
 
 
 
