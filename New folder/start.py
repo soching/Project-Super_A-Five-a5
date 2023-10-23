@@ -206,6 +206,19 @@ def Easy():
     imageTk = ImageTk.PhotoImage(image)
     canvas.create_image(1220, 59,image=imageTk)
 
+    # ----------add coint -------
+
+    
+    image2 = Image.open('./image/coint.png')
+    imageTk2 = ImageTk.PhotoImage(image2)
+    canvas.create_image(1050, 69,image=imageTk2)
+    canvas.create_image(169, 259,image=imageTk2)
+    canvas.create_image(129, 259,image=imageTk2)
+    canvas.create_image(529, 268,image=imageTk2)
+    canvas.create_image(759, 500,image=imageTk2)
+    canvas.create_image(859, 500,image=imageTk2)
+    canvas.create_image(959, 500,image=imageTk2)
+    canvas.create_image(1059, 500,image=imageTk2)
    
 
 
