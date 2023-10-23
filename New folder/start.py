@@ -274,12 +274,33 @@ def Normal():
     canvas.create_rectangle(1100, 570, 1050, 810, fill="black", tags="wall")
     canvas.create_rectangle(1150, 600, 1100, 810, fill="black", tags="wall")
 
-    
     canvas.create_rectangle(1400, 630, 1150, 810, fill="black", tags="wall")
 
-    
+    # --------add wall 2---------
 
+    canvas.create_rectangle(710, 120, 580, 90, fill="black", tags="wall")
+    # canvas.create_rectangle(330, 0, 300, 90, fill="black", tags="wall")
 
+    canvas.create_rectangle(700, 470, 600, 440, fill="black", tags="wall")
+    canvas.create_rectangle(700, 500, 560, 470, fill="black", tags="wall")
+    canvas.create_rectangle(740, 500, 600, 470, fill="black", tags="wall")
+
+    # -----wall right-----
+    canvas.create_rectangle(860, 410, 800, 380, fill="black", tags="wall")
+    canvas.create_rectangle(960, 350, 900, 320, fill="black", tags="wall")
+    canvas.create_rectangle(1280, 290, 1000, 260, fill="black", tags="wall")
+
+    canvas.create_rectangle(930, 210, 900, 180, fill="black", tags="wall")
+    canvas.create_rectangle(820, 170, 790, 140, fill="black", tags="wall")
+
+    # ------wall left-------
+    canvas.create_rectangle(480, 410, 420, 380, fill="black", tags="wall")
+    canvas.create_rectangle(380, 350, 320, 320, fill="black", tags="wall")
+    canvas.create_rectangle(280, 290, 0, 260, fill="black", tags="wall")
+
+    canvas.create_rectangle(370, 210, 340, 180, fill="black", tags="wall")
+    canvas.create_rectangle(490, 170, 460, 140, fill="black", tags="wall")
+   
 
 
     window.mainloop()
