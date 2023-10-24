@@ -463,13 +463,33 @@ def Hard():
     # -------------wall center--------------
     canvas.create_rectangle(750, 500, 550, 470, fill="black", tags="wall")
 
+    canvas.create_rectangle(750, 170, 550, 140, fill="black", tags="wall")
+
     # ---------------wall left-------------------
     canvas.create_rectangle(390, 550, 360, 520, fill="red", tags="wall")
     canvas.create_rectangle(490, 550, 460, 520, fill="red", tags="wall")
 
+    canvas.create_rectangle(470, 430, 440, 400, fill="black", tags="wall")
+    canvas.create_rectangle(400, 390, 370, 360, fill="black", tags="wall")
+    canvas.create_rectangle(330, 350, 300, 320, fill="black", tags="wall")      
+    canvas.create_rectangle(260, 310, 0, 280, fill="black", tags="wall") 
+
+    canvas.create_rectangle(180, 200, 0, 170, fill="black", tags="wall")    
+
+    canvas.create_rectangle(460, 240, 360, 210, fill="black", tags="wall")  
+
     # ----------------wall right-------------------
     canvas.create_rectangle(940, 550, 910, 520, fill="red", tags="wall")
     canvas.create_rectangle(840, 550, 810, 520, fill="red", tags="wall")
+
+    canvas.create_rectangle(850, 430, 820, 400, fill="black", tags="wall")
+    canvas.create_rectangle(920, 390, 890, 360, fill="black", tags="wall")
+    canvas.create_rectangle(990, 350, 960, 320, fill="black", tags="wall")
+    canvas.create_rectangle(1360, 310, 1030, 280, fill="black", tags="wall")
+
+    canvas.create_rectangle(1360, 200, 1100, 170, fill="black", tags="wall")
+
+    canvas.create_rectangle(920, 240, 820, 210, fill="black", tags="wall")
     
 
     canvas.create_rectangle(300, 530, 250, 810, fill="black", tags="wall")
