@@ -156,6 +156,7 @@ def Easy():
     window.title('Easy')
     app_width = window.winfo_screenwidth()
     app_height = window.winfo_screenheight()
+
     window.geometry(f'{app_width}x{app_height}')
     frame = Frame(window, width=app_width, height=app_height)
     frame.pack()
@@ -502,8 +503,7 @@ def Hard():
     canvas.create_rectangle(1150, 600, 1100, 810, fill="black", tags="wall")
 
     canvas.create_rectangle(1400, 630, 1150, 810, fill="black", tags="wall")
-
-
+    
 
     window.mainloop()
     
