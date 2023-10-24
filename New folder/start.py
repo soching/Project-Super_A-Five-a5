@@ -305,7 +305,7 @@ def Easy():
 #Normal Game--------------------------------
 
 def Normal():
-    global window,c,position_enemy6,d,position_enemy7,e,position_enemy8,f
+    global window,c,position_enemy6,d,position_enemy7,e,position_enemy8,f 
     window.destroy() 
     window = Tk()
     window.title('Normal')
@@ -578,6 +578,79 @@ def Hard():
     image = Image.open('./image/door3.png')
     imageTk = ImageTk.PhotoImage(image)
     canvas.create_image(645, 108,image=imageTk)
+
+    # ------------coins 3--------------
+    image2 = Image.open('./image/coint.png')
+    imageTk2 = ImageTk.PhotoImage(image2)
+
+    # ---------------center coins---------------
+    canvas.create_image(700, 400,image=imageTk2)
+    canvas.create_image(650, 400,image=imageTk2)
+    canvas.create_image(600, 400,image=imageTk2)
+
+    canvas.create_image(600, 360,image=imageTk2)
+    canvas.create_image(650, 360,image=imageTk2)
+    canvas.create_image(700, 360,image=imageTk2)
+
+    canvas.create_image(700, 320,image=imageTk2)
+    canvas.create_image(650, 320,image=imageTk2)
+    canvas.create_image(600, 320,image=imageTk2)
+
+    # -----------------right coins---------------
+    canvas.create_image(870, 460,image=imageTk2)
+
+    canvas.create_image(1150, 490,image=imageTk2)
+    canvas.create_image(1190, 490,image=imageTk2)
+    canvas.create_image(1230, 490,image=imageTk2)
+
+    canvas.create_image(1150, 450,image=imageTk2)
+    canvas.create_image(1190, 450,image=imageTk2)
+    canvas.create_image(1230, 450,image=imageTk2)
+
+    canvas.create_image(1150, 530,image=imageTk2)
+    canvas.create_image(1190, 530,image=imageTk2)
+    canvas.create_image(1230, 530,image=imageTk2)
+
+    # ------------------coins on-----------------
+    canvas.create_image(1150, 260,image=imageTk2)
+    canvas.create_image(1190, 260,image=imageTk2)
+    canvas.create_image(1230, 260,image=imageTk2)
+    canvas.create_image(1110, 260,image=imageTk2)
+
+    canvas.create_image(1150, 150,image=imageTk2)
+    canvas.create_image(1190, 150,image=imageTk2)
+    canvas.create_image(1230, 150,image=imageTk2)
+
+    canvas.create_image(870, 150,image=imageTk2)
+
+
+    # ---------------------left coins------------
+    canvas.create_image(425, 460,image=imageTk2)
+
+    canvas.create_image(43, 490,image=imageTk2)
+    canvas.create_image(83, 490,image=imageTk2)
+    canvas.create_image(123, 490,image=imageTk2)
+
+    canvas.create_image(43, 450,image=imageTk2)
+    canvas.create_image(83, 450,image=imageTk2)
+    canvas.create_image(123, 450,image=imageTk2)
+
+    canvas.create_image(43, 530,image=imageTk2)
+    canvas.create_image(83, 530,image=imageTk2)
+    canvas.create_image(123, 530,image=imageTk2)
+
+    # -------------------coins on-----------------
+    canvas.create_image(43,260,image=imageTk2)
+    canvas.create_image(83, 260,image=imageTk2)
+    canvas.create_image(123, 260,image=imageTk2)
+    canvas.create_image(163, 260,image=imageTk2)
+
+    canvas.create_image(43, 150,image=imageTk2)
+    canvas.create_image(83, 150,image=imageTk2)
+    canvas.create_image(123, 150,image=imageTk2)
+
+    canvas.create_image(410, 150,image=imageTk2)
+
 
 
 
