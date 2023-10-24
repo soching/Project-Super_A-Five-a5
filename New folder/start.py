@@ -375,7 +375,75 @@ def Normal():
 
     canvas.create_rectangle(370, 210, 340, 180, fill="black", tags="wall")
     canvas.create_rectangle(490, 170, 460, 140, fill="black", tags="wall")
-   
+    #-----------enemy-normal--------
+    enemy4 = Image.open("image/enemy.png")
+    enemy4 = enemy4.resize((70, 70))
+    background5 = ImageTk.PhotoImage(enemy4)
+    position_enemy5=canvas.create_image(980, 210, image=background5, anchor=NW)
+    c=3
+    def movebird5():
+        global c
+
+        canvas.move(position_enemy5, c, 0)
+
+        (leftPos, topPos, rightPos, bottomPos) = canvas.bbox(position_enemy5)
+        if leftPos <= 980 or rightPos >= 1270:
+            c = -c
+        print(c)
+        canvas.after(30, movebird5)
+    canvas.after(30, movebird5)
+
+    enemy5 = Image.open("image/enemy.png")
+    enemy5 = enemy5.resize((70, 70))
+    background6 = ImageTk.PhotoImage(enemy5)
+    position_enemy6=canvas.create_image(0, 210, image=background6, anchor=NW)
+    d=3
+    def movebird6():
+        global d
+
+        canvas.move(position_enemy6, d, 0)
+
+        (leftPos, topPos, rightPos, bottomPos) = canvas.bbox(position_enemy6)
+        if leftPos <= 0 or rightPos >= 300:
+            d = -d
+        print(d)
+        canvas.after(40, movebird6)
+    canvas.after(30, movebird6)
+
+    enemy6 = Image.open("image/enemy.png")
+    enemy6 = enemy6.resize((70, 70))
+    background7 = ImageTk.PhotoImage(enemy6)
+    position_enemy7=canvas.create_image(580, 390, image=background7, anchor=NW)
+    e=3
+    def movebird7():
+        global e
+
+        canvas.move(position_enemy7, e, 0)
+
+        (leftPos, topPos, rightPos, bottomPos) = canvas.bbox(position_enemy7)
+        if leftPos <= 580 or rightPos >= 720:
+            e = -e
+        print(e)
+        canvas.after(80, movebird7)
+    canvas.after(30, movebird7)
+
+
+    enemy7 = Image.open("image/enemy.png")
+    enemy7 = enemy7.resize((70, 70))
+    background8 = ImageTk.PhotoImage(enemy7)
+    position_enemy8=canvas.create_image(530, 580, image=background8, anchor=NW)
+    f=3
+    def movebird8():
+        global f
+
+        canvas.move(position_enemy8, f, 0)
+
+        (leftPos, topPos, rightPos, bottomPos) = canvas.bbox(position_enemy8)
+        if leftPos <= 530 or rightPos >= 770:
+            f = -f
+        print(f)
+        canvas.after(30, movebird8)
+    canvas.after(30, movebird8)
     # -----------door 2-------------
 
     image = Image.open('./image/door.png')
