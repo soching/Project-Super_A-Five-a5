@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
-
+import winsound
 #show-window2--------------------------
 
 def main():
@@ -507,13 +507,14 @@ canvas.create_image(0, 0, image=background, anchor=NW)
 splash_label = Label(window, text="Power A-five", font=("Robus", 60, "bold"))
 splash_label.pack()
 splash_label.place(relx=0.5, rely=0.3, anchor='center')
-
 window.title("Progress Bar in Tk")
 progressbar = ttk.Progressbar(mode="indeterminate")
 progressbar.place(x=550, y=390, width=240)
 progressbar.start()
 window.after(2000, main) 
-
+def play():
+    winsound.PlaySound('./sound/086354_8-bit-arcade-video-game-start-sound-effect-gun-reload-and-jump-81124-_1_.wav', winsound.SND_FILENAME | winsound.SND_ASYNC)
+play()
 
 window.mainloop()
 
