@@ -305,7 +305,7 @@ def Easy():
 #Normal Game--------------------------------
 
 def Normal():
-    global window
+    global window,c,position_enemy6,d,position_enemy7,e,position_enemy8,f
     window.destroy() 
     window = Tk()
     window.title('Normal')
