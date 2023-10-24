@@ -150,7 +150,7 @@ def Display():
 #Easy Game--------------------------------
 
 def Easy():
-    global window
+    global window,x,position_enemy2,y,position_enemy3,a,position_enemy4,b
     window.destroy() 
     window = Tk()
     window.title('Easy')
@@ -387,10 +387,16 @@ def Hard():
     canvas.create_rectangle(1250, 0, 1300, 1200, fill="black", tags="wall")
 
     # -------------wall center--------------
-    canvas.create_rectangle(750, 500, 550, 470, fill="white", tags="wall")
-    canvas.create_rectangle(750, 150, 720, 470, fill="white", tags="wall")
-    canvas.create_rectangle(580, 150, 550, 470, fill="white", tags="wall")
+    canvas.create_rectangle(750, 500, 550, 470, fill="black", tags="wall")
 
+    # ---------------wall left-------------------
+    canvas.create_rectangle(390, 550, 360, 520, fill="red", tags="wall")
+    canvas.create_rectangle(490, 550, 460, 520, fill="red", tags="wall")
+
+    # ----------------wall right-------------------
+    canvas.create_rectangle(940, 550, 910, 520, fill="red", tags="wall")
+    canvas.create_rectangle(840, 550, 810, 520, fill="red", tags="wall")
+    
 
     canvas.create_rectangle(300, 530, 250, 810, fill="black", tags="wall")
     canvas.create_rectangle(300, 570, 200, 810, fill="black", tags="wall")
