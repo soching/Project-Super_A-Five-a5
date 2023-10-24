@@ -156,6 +156,7 @@ def Easy():
     window.title('Easy')
     app_width = window.winfo_screenwidth()
     app_height = window.winfo_screenheight()
+
     window.geometry(f'{app_width}x{app_height}')
     frame = Frame(window, width=app_width, height=app_height)
     frame.pack()
@@ -454,36 +455,7 @@ def Hard():
     button_back.pack()
     button_back.place(x=50, y=50, width=90)  
 
-    # ----------Wall Of Hard----------
-    canvas.create_rectangle(150, 630, 0, 810, fill="black", tags="wall")
-    canvas.create_rectangle(0, 0, 20, 810, fill="black", tags="wall")
-    canvas.create_rectangle(0, 0, 1400, 20, fill="black", tags="wall")
-    canvas.create_rectangle(1250, 0, 1300, 1200, fill="black", tags="wall")
-
-    # -------------wall center--------------
-    canvas.create_rectangle(750, 500, 550, 470, fill="black", tags="wall")
-
-    # ---------------wall left-------------------
-    canvas.create_rectangle(390, 550, 360, 520, fill="red", tags="wall")
-    canvas.create_rectangle(490, 550, 460, 520, fill="red", tags="wall")
-
-    # ----------------wall right-------------------
-    canvas.create_rectangle(940, 550, 910, 520, fill="red", tags="wall")
-    canvas.create_rectangle(840, 550, 810, 520, fill="red", tags="wall")
     
-
-    canvas.create_rectangle(300, 530, 250, 810, fill="black", tags="wall")
-    canvas.create_rectangle(300, 570, 200, 810, fill="black", tags="wall")
-    canvas.create_rectangle(300, 600, 150, 810, fill="black", tags="wall")
-
-
-    canvas.create_rectangle(1050, 530, 1000, 810, fill="black", tags="wall")
-    canvas.create_rectangle(1100, 570, 1050, 810, fill="black", tags="wall")
-    canvas.create_rectangle(1150, 600, 1100, 810, fill="black", tags="wall")
-
-    canvas.create_rectangle(1400, 630, 1150, 810, fill="black", tags="wall")
-
-
 
     window.mainloop()
     
