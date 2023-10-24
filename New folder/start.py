@@ -504,7 +504,7 @@ def Normal():
 #Hard Game--------------------------------
 
 def Hard():
-    global window
+    global window,g,position_enemy10,h,position_enemy11,i,position_enemy12,j,position_enemy13,k
     window.destroy() 
     window = Tk()
     window.title('Hard')
