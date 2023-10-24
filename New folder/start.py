@@ -504,6 +504,14 @@ def Hard():
 
     canvas.create_rectangle(1400, 630, 1150, 810, fill="black", tags="wall")
     
+    
+    # -----------door 3-------------
+
+    image = Image.open('./image/door3.png')
+    imageTk = ImageTk.PhotoImage(image)
+    canvas.create_image(645, 108,image=imageTk)
+
+
 
     window.mainloop()
     
