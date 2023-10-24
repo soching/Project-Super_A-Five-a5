@@ -372,13 +372,39 @@ def Hard():
     frame.pack()
     canvas = Canvas(frame, width=app_width, height=app_height)
     canvas.pack()
-    bg_image = Image.open("image/Hard.png")
+    bg_image = Image.open("image/bg3.jpg")
     bg_image = bg_image.resize((app_width, app_height))
     background = ImageTk.PhotoImage(bg_image)
     canvas.create_image(0, 0, image=background, anchor=NW)
     button_back = Button(canvas, text="Back",font=40, command=window3, bg='red',border=10)
     button_back.pack()
     button_back.place(x=50, y=50, width=90)  
+
+    # ----------Wall Of Hard----------
+    canvas.create_rectangle(150, 630, 0, 810, fill="black", tags="wall")
+    canvas.create_rectangle(0, 0, 20, 810, fill="black", tags="wall")
+    canvas.create_rectangle(0, 0, 1400, 20, fill="black", tags="wall")
+    canvas.create_rectangle(1250, 0, 1300, 1200, fill="black", tags="wall")
+
+    # -------------wall center--------------
+    canvas.create_rectangle(750, 500, 550, 470, fill="white", tags="wall")
+    canvas.create_rectangle(750, 150, 720, 470, fill="white", tags="wall")
+    canvas.create_rectangle(580, 150, 550, 470, fill="white", tags="wall")
+
+
+    canvas.create_rectangle(300, 530, 250, 810, fill="black", tags="wall")
+    canvas.create_rectangle(300, 570, 200, 810, fill="black", tags="wall")
+    canvas.create_rectangle(300, 600, 150, 810, fill="black", tags="wall")
+
+
+    canvas.create_rectangle(1050, 530, 1000, 810, fill="black", tags="wall")
+    canvas.create_rectangle(1100, 570, 1050, 810, fill="black", tags="wall")
+    canvas.create_rectangle(1150, 600, 1100, 810, fill="black", tags="wall")
+
+    canvas.create_rectangle(1400, 630, 1150, 810, fill="black", tags="wall")
+
+
+
     window.mainloop()
 #show-of start window--------------
 
