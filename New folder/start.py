@@ -5,7 +5,7 @@ import winsound
 #show-window2--------------------------
 
 def main():
-    global window
+    global window,stop_to_stop
     window.destroy()
     window = Tk()
     window.title('window2')
@@ -33,8 +33,13 @@ def main():
     button_back3 = Button(canvas, text="Story",font=90, command=show_story, bg='blue',border=25)
     button_back3.pack()
     button_back3.place(x=550, y=490, width=250)
-
-
+    def play():
+        winsound.PlaySound('./sound/8bit-music-for-game-68698.wav', winsound.SND_FILENAME | winsound.SND_ASYNC)
+    play()
+    def stop_sound():
+        winsound.PlaySound(None, winsound.SND_PURGE)
+    def stop_to_stop():
+        stop_sound()
     window.mainloop()
 
 #show-window3--------------------------------------
@@ -68,6 +73,7 @@ def window3():
     button_back2.place(x=550, y=340, width=250)
 
     button_back3 = Button(canvas, text="Easy",font=90, command=Easy, bg='blue',border=25)
+    
     button_back3.pack()
     button_back3.place(x=550, y=460, width=250)
     # window.after(1000, window4)
@@ -119,7 +125,7 @@ def show_story():
     cteat_img = cteat_img.resize((300, 300))
     background1 = ImageTk.PhotoImage(cteat_img)
     canvas.create_image(180, 350, image=background1, anchor=NW)
-
+    
     window.mainloop()
 
 
@@ -294,7 +300,7 @@ def Easy():
     canvas.create_image(859, 500,image=imageTk2)
     canvas.create_image(959, 500,image=imageTk2)
     canvas.create_image(1059, 500,image=imageTk2)
-   
+    stop_to_stop()
 
 
 
@@ -493,7 +499,7 @@ def Normal():
     canvas.create_image(612, 290,image=imageTk2)
     canvas.create_image(652, 290,image=imageTk2)
     canvas.create_image(692, 290,image=imageTk2)
-
+    stop_to_stop()
 
    
 
@@ -720,7 +726,7 @@ def Hard():
     canvas.create_image(123, 150,image=imageTk2)
 
     canvas.create_image(410, 150,image=imageTk2)
-
+    stop_to_stop()
 
 
 
