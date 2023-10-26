@@ -621,10 +621,10 @@ def Normal():
     imageTk2 = ImageTk.PhotoImage(image2)
 
     # -------------coins right------------
-    canvas.create_image(1100, 240,image=imageTk2)
-    canvas.create_image(1140, 240,image=imageTk2)
-    canvas.create_image(1180, 240,image=imageTk2)
-    canvas.create_image(1220, 240,image=imageTk2)
+    canvas.create_image(1100, 220,image=imageTk2)
+    canvas.create_image(1140, 220,image=imageTk2)
+    canvas.create_image(1180, 220,image=imageTk2)
+    canvas.create_image(1220, 220,image=imageTk2)
 
     canvas.create_image(915, 160,image=imageTk2)
     canvas.create_image(805, 120,image=imageTk2)
@@ -637,10 +637,10 @@ def Normal():
     canvas.create_image(1220, 490,image=imageTk2)
 
     # ---------------coins left-------------
-    canvas.create_image(55, 240,image=imageTk2)
-    canvas.create_image(95, 240,image=imageTk2)
-    canvas.create_image(135, 240,image=imageTk2)
-    canvas.create_image(175, 240,image=imageTk2)
+    canvas.create_image(55, 220,image=imageTk2)
+    canvas.create_image(95, 220,image=imageTk2)
+    canvas.create_image(135, 220,image=imageTk2)
+    canvas.create_image(175, 220,image=imageTk2)
 
     canvas.create_image(355, 160,image=imageTk2)
     canvas.create_image(475, 120,image=imageTk2)
