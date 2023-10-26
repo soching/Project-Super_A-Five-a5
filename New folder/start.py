@@ -662,7 +662,7 @@ def Normal():
 #Hard Game--------------------------------
 
 def Hard():
-    global window,g,position_enemy10,h,position_enemy11,i,position_enemy12,j,position_enemy13,k
+    global window,g,position_enemy10,h,position_enemy11,i,position_enemy12,j,position_enemy13,k,player,keyPressed
     window.destroy() 
     window = Tk()
     window.title('Hard')
@@ -673,6 +673,73 @@ def Hard():
     frame.pack()
     canvas = Canvas(frame, width=app_width, height=app_height)
     canvas.pack()
+    #---------hero-hard------------
+    keyPressed = []
+    SPEED = 7 
+    TIME = 10
+    GRAVITY_FORCE=9
+    def check_movement(dx=0, dy=0):
+            ball_coords = canvas.bbox(player)
+            new_x1 = ball_coords[0] + dx
+            new_y1 = ball_coords[1] + dy
+            new_x2 = ball_coords[2] + dx
+            new_y2 = ball_coords[3] + dy
+            overlapping_objects = canvas.find_overlapping(new_x1, new_y1, new_x2, new_y2)
+            for wall_id in canvas.find_withtag("wall"):
+                if wall_id in overlapping_objects:
+                    return False
+            return True
+
+    def start_move(event):
+            if event.keysym not in keyPressed:
+                print(event.keysym)
+                keyPressed.append(event.keysym)
+                if len(keyPressed) == 1:
+                    move()
+
+    def stop_move(event):
+            global keyPressed
+            if event.keysym in keyPressed:
+                keyPressed.remove(event.keysym)
+
+    def jump(force):
+            if force > 0:
+                if check_movement(0, -force):
+                    canvas.move(player, 0, -force)
+            window.after(TIME, jump, force - 1)
+
+    def move():
+            if not keyPressed == []:
+                x = 0
+                if "Left" in keyPressed:
+                    x = -SPEED
+                    #add
+                    canvas.itemconfig(player,image=hero3)
+                if "Right" in keyPressed:
+                    x = SPEED
+                    canvas.itemconfig(player,image=play_3)
+                if check_movement(x, 0):
+                    canvas.move(player, x, 0)
+                if "space" in keyPressed and not check_movement(0, GRAVITY_FORCE):
+                    jump(30)
+                window.after(TIME, move)
+
+    def gravity():
+        if check_movement(0, GRAVITY_FORCE):
+            canvas.move(player, 0, GRAVITY_FORCE)
+        window.after(TIME, gravity)
+    bg_image = Image.open("image/bg.png")
+    bg_image = bg_image.resize((app_width, app_height))
+    background = ImageTk.PhotoImage(bg_image)
+    canvas.create_image(0, 0, image=background, anchor=NW)
+    #add more
+    hero_4 = Image.open("image/image 16.png")
+    hero_4 = hero_4.resize((40, 40))
+    hero3 = ImageTk.PhotoImage(hero_4)
+    button_back = Button(canvas, text="Back",font=40, command=window3, bg='red',border=10)
+    button_back.pack()
+    button_back.place(x=50, y=50, width=90)
+
     bg_image = Image.open("image/bg3.jpg")
     bg_image = bg_image.resize((app_width, app_height))
     background = ImageTk.PhotoImage(bg_image)
@@ -729,6 +796,15 @@ def Hard():
     canvas.create_rectangle(1150, 600, 1100, 810, fill="black", tags="wall")
 
     canvas.create_rectangle(1400, 630, 1150, 810, fill="black", tags="wall")
+    #-------------hero-hard------
+    player_left = Image.open("image/hero.png")
+    player_left = player_left.resize((50, 50))
+    play_3 = ImageTk.PhotoImage(player_left)
+    player = canvas.create_image(80, 500, image=play_3, anchor=NW) 
+    gravity()                     
+    window.bind("<Key>", start_move)
+    window.bind("<KeyRelease>", stop_move)
+
     #----------enemy-----------
     enemy8 = Image.open("image/enemy.png")
     enemy8 = enemy8.resize((70, 70))
