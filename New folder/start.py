@@ -607,10 +607,14 @@ def Normal():
         canvas.after(30, movebird8)
     canvas.after(30, movebird8)
     # -----------door 2-------------
-
     image = Image.open('./image/door.png')
     imageTk = ImageTk.PhotoImage(image)
     canvas.create_image(645, 59,image=imageTk)
+
+    # -----------add key2----------
+    image4 = Image.open('./image/key.png')
+    imageTk4 = ImageTk.PhotoImage(image4)
+    canvas.create_image(650, 570,image=imageTk4)
 
     # ------------coins 2--------------
     image2 = Image.open('./image/coint.png')
