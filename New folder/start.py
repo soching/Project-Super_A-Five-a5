@@ -286,6 +286,11 @@ def Easy():
     image4 = Image.open('./image/key.png')
     imageTk4 = ImageTk.PhotoImage(image4)
     canvas.create_image(795, 152,image=imageTk4)
+
+    # -------------add heart-------------
+    image5 = Image.open('./image/heart.png')
+    imageTk5 = ImageTk.PhotoImage(image5)
+    canvas.create_image(625, 50,image=imageTk5)
     #-----------enemy-----------
     enemy1 = Image.open("image/enemy.png")
     enemy1 = enemy1.resize((70, 70))
@@ -616,6 +621,11 @@ def Normal():
     imageTk4 = ImageTk.PhotoImage(image4)
     canvas.create_image(650, 570,image=imageTk4)
 
+    # -------------add heart-------------
+    image5 = Image.open('./image/heart.png')
+    imageTk5 = ImageTk.PhotoImage(image5)
+    canvas.create_image(235, 50,image=imageTk5)
+
     # ------------coins 2--------------
     image2 = Image.open('./image/coint.png')
     imageTk2 = ImageTk.PhotoImage(image2)
@@ -895,6 +905,11 @@ def Hard():
     image4 = Image.open('./image/key.png')
     imageTk4 = ImageTk.PhotoImage(image4)
     canvas.create_image(1200, 590,image=imageTk4)
+
+    # -------------add heart-------------
+    image5 = Image.open('./image/heart.png')
+    imageTk5 = ImageTk.PhotoImage(image5)
+    canvas.create_image(645, 50,image=imageTk5)
 
     # ------------coins 3--------------
     image2 = Image.open('./image/coint.png')
