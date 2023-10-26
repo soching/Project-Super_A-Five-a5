@@ -891,6 +891,11 @@ def Hard():
     imageTk = ImageTk.PhotoImage(image)
     canvas.create_image(645, 108,image=imageTk)
 
+    # ------------add key3--------------
+    image4 = Image.open('./image/key.png')
+    imageTk4 = ImageTk.PhotoImage(image4)
+    canvas.create_image(1200, 590,image=imageTk4)
+
     # ------------coins 3--------------
     image2 = Image.open('./image/coint.png')
     imageTk2 = ImageTk.PhotoImage(image2)
