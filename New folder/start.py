@@ -929,10 +929,10 @@ def Hard():
     canvas.create_image(1230, 530,image=imageTk2)
 
     # ------------------coins on-----------------
-    canvas.create_image(1150, 260,image=imageTk2)
-    canvas.create_image(1190, 260,image=imageTk2)
-    canvas.create_image(1230, 260,image=imageTk2)
-    canvas.create_image(1110, 260,image=imageTk2)
+    canvas.create_image(1150, 240,image=imageTk2)
+    canvas.create_image(1190, 240,image=imageTk2)
+    canvas.create_image(1230, 240,image=imageTk2)
+    canvas.create_image(1110, 240,image=imageTk2)
 
     canvas.create_image(1150, 150,image=imageTk2)
     canvas.create_image(1190, 150,image=imageTk2)
@@ -957,10 +957,10 @@ def Hard():
     canvas.create_image(123, 530,image=imageTk2)
 
     # -------------------coins on-----------------
-    canvas.create_image(43,260,image=imageTk2)
-    canvas.create_image(83, 260,image=imageTk2)
-    canvas.create_image(123, 260,image=imageTk2)
-    canvas.create_image(163, 260,image=imageTk2)
+    canvas.create_image(43,240,image=imageTk2)
+    canvas.create_image(83, 240,image=imageTk2)
+    canvas.create_image(123, 240,image=imageTk2)
+    canvas.create_image(163, 240,image=imageTk2)
 
     canvas.create_image(43, 150,image=imageTk2)
     canvas.create_image(83, 150,image=imageTk2)
