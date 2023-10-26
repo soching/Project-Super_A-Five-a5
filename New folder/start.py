@@ -282,6 +282,10 @@ def Easy():
     window.bind("<Key>", start_move)
     window.bind("<KeyRelease>", stop_move)
 
+    # -----------add key----------
+    image4 = Image.open('./image/key.png')
+    imageTk4 = ImageTk.PhotoImage(image4)
+    canvas.create_image(795, 152,image=imageTk4)
     #-----------enemy-----------
     enemy1 = Image.open("image/enemy.png")
     enemy1 = enemy1.resize((70, 70))
